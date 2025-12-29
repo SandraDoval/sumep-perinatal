@@ -75,11 +75,11 @@ def load_models():
         
         # Modelo SpaCy
         try:
-            nlp = spacy.load("es_core_news_md")
+            nlp = spacy.load("es_core_news_sm")
         except:
             import os
-            os.system("python -m spacy download es_core_news_md")
-            nlp = spacy.load("es_core_news_md")
+            os.system("python -m spacy download es_core_news_sm")
+            nlp = spacy.load("es_core_news_sm")
         
         return sentiment_model, nlp
 
